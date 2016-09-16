@@ -72,7 +72,8 @@ public class RPGFight : MonoBehaviour {
 
     public void ShowAttackAnimation()
     {
-        this.currentChar.GetComponent<Animator>().SetTrigger("Attack3Trigger");
+        AttackType attackType = currentChar.attackList[this.chosenAttack];
+        this.currentChar.GetComponent<Animator>().SetTrigger(attackType.animationTrigger);
     }
 
     public void ShowTargetEffectAnimation()

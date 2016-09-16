@@ -8,4 +8,5 @@ public class AttackType : ScriptableObject {
     public DamageType damageType;
     public int damageAmount;
     public int manaCost;
+    public string animationTrigger;
 }
