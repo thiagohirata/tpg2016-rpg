@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class Team
+public enum Team
 {
-    public List<RPGFightChar> characters;
+    TeamA,
+    TeamB
 }

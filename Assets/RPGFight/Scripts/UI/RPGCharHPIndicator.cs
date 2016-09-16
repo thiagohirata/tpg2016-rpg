@@ -17,7 +17,7 @@ public class RPGCharHPIndicator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //atualiza o número
-        uitext.text = character.currentHp.ToString();
+        uitext.text = character.currentHp.ToString() + "\n" + character.charName;
 
         //alinha com a câmera
         this.transform.LookAt(targetCamera.transform);

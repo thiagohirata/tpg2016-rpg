@@ -10,6 +10,10 @@ public class AttackButtonBehaviour : MonoBehaviour {
     void Start () {
         rpgFight = GetComponentInParent<RPGFight>();
         uitext = GetComponentInChildren<UnityEngine.UI.Text>();
+
+        //pluga, programaticamente, o onClick do botão ao OnClick deste behaviour
+        UnityEngine.UI.Button button = GetComponent<UnityEngine.UI.Button>();
+        button.onClick.AddListener(() => OnClick());
     }
 	
 	// Update is called once per frame
@@ -24,4 +28,9 @@ public class AttackButtonBehaviour : MonoBehaviour {
             }
         }
 	}
+
+    void OnClick()
+    {
+        rpgFight.ChooseAttack(attackIndex);
+    }
 }
